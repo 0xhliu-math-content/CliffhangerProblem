@@ -1,6 +1,8 @@
 from manim import *
+from .decorator_cleanup import remove_all_mobjects
 
-def section_intro(self):
+@remove_all_mobjects
+def section(self):
         # Introduction Text
         intro_text = Text("The Cliffhanger Problem", font_size=42)
         self.play(FadeIn(intro_text))
